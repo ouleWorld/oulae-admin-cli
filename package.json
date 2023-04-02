@@ -15,7 +15,8 @@
   },
   "files": [
     "build",
-    "bin.js"
+    "bin.js",
+    "oulae_admin"
   ],
   "keywords": [
     "cli",
