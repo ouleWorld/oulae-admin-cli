@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const component_1 = require("./en-US/component");
+const globalHeader_1 = require("./en-US/globalHeader");
+const menu_1 = require("./en-US/menu");
+const pages_1 = require("./en-US/pages");
+const pwa_1 = require("./en-US/pwa");
+const settingDrawer_1 = require("./en-US/settingDrawer");
+const settings_1 = require("./en-US/settings");
+exports.default = Object.assign(Object.assign(Object.assign(Object.assign(Object.assign(Object.assign(Object.assign({ 'navBar.lang': 'Languages', 'layout.user.link.help': 'Help', 'layout.user.link.privacy': 'Privacy', 'layout.user.link.terms': 'Terms', 'app.copyright.produced': 'Produced by Ant Financial Experience Department', 'app.preview.down.block': 'Download this page to your local project', 'app.welcome.link.fetch-blocks': 'Get all block', 'app.welcome.link.block-list': 'Quickly build standard, pages based on `block` development' }, globalHeader_1.default), menu_1.default), settingDrawer_1.default), settings_1.default), pwa_1.default), component_1.default), pages_1.default);

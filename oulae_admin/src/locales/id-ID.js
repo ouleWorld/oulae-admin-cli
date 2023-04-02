@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const component_1 = require("./id-ID/component");
+const globalHeader_1 = require("./id-ID/globalHeader");
+const menu_1 = require("./id-ID/menu");
+const pages_1 = require("./id-ID/pages");
+const pwa_1 = require("./id-ID/pwa");
+const settingDrawer_1 = require("./id-ID/settingDrawer");
+const settings_1 = require("./id-ID/settings");
+exports.default = Object.assign(Object.assign(Object.assign(Object.assign(Object.assign(Object.assign(Object.assign({ 'navbar.lang': 'Bahasa', 'layout.user.link.help': 'Bantuan', 'layout.user.link.privacy': 'Privasi', 'layout.user.link.terms': 'Ketentuan', 'app.preview.down.block': 'Unduh halaman ini dalam projek lokal anda', 'app.welcome.link.fetch-blocks': 'Dapatkan semua blok', 'app.welcome.link.block-list': 'Buat standar dengan cepat, halaman-halaman berdasarkan pengembangan `block`' }, globalHeader_1.default), menu_1.default), settingDrawer_1.default), settings_1.default), pwa_1.default), component_1.default), pages_1.default);
