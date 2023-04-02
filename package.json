@@ -1,17 +1,13 @@
 {
   "name": "oulae-admin-cli",
-  "version": "0.0.2",
-  "description": "cli模版仓库",
+  "version": "0.0.1",
+  "description": "oulae-admin-cli",
   "main": "./build",
   "scripts": {
     "clear": "rimraf build",
     "build": "npm run clear && tsc",
     "publish": "npm run build && npm publish",
     "lint": "tslint ./src/**/*.ts --fix"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/zxyue25/cli-template.git"
   },
   "bin": {
     "oulae-admin-cli": "./bin.js",
