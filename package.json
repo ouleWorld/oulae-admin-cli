@@ -6,7 +6,6 @@
   "scripts": {
     "clear": "rimraf build",
     "build": "npm run clear && tsc",
-    "publish": "npm run build && npm publish",
     "lint": "tslint ./src/**/*.ts --fix"
   },
   "bin": {
