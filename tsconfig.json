@@ -16,7 +16,7 @@
     "lib": ["es6"],
     "typeRoots": ["./node_modules/@types"],
     "outDir": "./build", // 重定向输出目录
-    "rootDirs": ["./src", "./oulae_admin"] // 仅用来控制输出的目录结构
+    "rootDirs": ["./src"] // 仅用来控制输出的目录结构
   },
   "exclude": [
     // 不参与打包的目录
@@ -25,7 +25,8 @@
     "**/*.test.ts",
     "temp",
     "scripts",
-    "./src/__tests__"
+    "./src/__tests__",
+    "oulae_admin"
   ],
   "esModuleInterop": true,
   "allowSyntheticDefaultImports": true,

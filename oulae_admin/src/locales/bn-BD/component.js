@@ -1,7 +1,0 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = {
-    'component.tagSelect.expand': 'বিস্তৃত',
-    'component.tagSelect.collapse': 'সঙ্কুচিত',
-    'component.tagSelect.all': 'সব',
-};
