@@ -1,1 +1,1 @@
-export const cwd = process.cwd()
+export const cwd = process.cwd();

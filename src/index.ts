@@ -37,7 +37,6 @@ const getLatestVersion = async () => {
 
 function start() {
   const commandsPath = getCommand();
-  console.log('commandsPath: ', commandsPath);
 
   commandsPath.forEach((commandPath) => {
     // 写法 1
@@ -74,7 +73,6 @@ function start() {
 
   // 这里是处理非定义命令的情况
   program.on('command:*', async ([cmd]) => {
-    console.log('====> here');
     program.outputHelp();
     // 打印错误信息
     error(`未知命令 command ${chalk.yellow(cmd)}.`);
