@@ -1,5 +1,5 @@
 const action = () => {
-  console.log('package action');
+  console.log('package action here');
 };
 export default {
   command: 'package <package-name> [scope]',

@@ -1,5 +1,5 @@
 const action = () => {
-  console.log('scope action');
+  console.log('scope action here');
 };
 export default {
   command: 'scope <scope>',
