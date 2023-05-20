@@ -23,7 +23,7 @@
     "typescript",
     "command"
   ],
-  "author": "zxyue25",
+  "author": "oulae",
   "license": "ISC",
   "devDependencies": {
     "rimraf": "^3.0.2",

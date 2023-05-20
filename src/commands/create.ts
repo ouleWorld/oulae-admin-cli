@@ -1,5 +1,5 @@
 import * as path from 'path';
-// 在 node 中执行 shell 指令
+// 处理模板信息的一个库，我们可以使用这个库来重写 package.json 里面的相关信息
 import * as handlebars from 'handlebars';
 // 这个库是和用户做交互的时候用的
 import * as inquirer from 'inquirer';
@@ -34,6 +34,11 @@ export const checkProjectExist = async (targetDir) => {
   return false;
 };
 
+/**
+ * @description: 1. 问答交互 2. 返回用户关于问题的相关结果
+ * @param {*} projectName 表示项目的名字
+ * @return {*}
+ */
 export const getQuestions = async (projectName) => {
   return await inquirer.prompt([
     {
@@ -81,10 +86,29 @@ export const cloneProject = async (targetDir, projectName, projectInfo) => {
   info(`$ cd ${projectName}\n$ sh start.sh\n`);
 };
 
+/**
+ * @description:
+ * @param {string} projectName 表示项目的名称，这个参数是由 command 中传递过来的
+ * @param {any} cmdArgs 表示项目的参数，这个是由 optionList 传递过来的
+ * @return {*}
+ */
 const action = async (projectName: string, cmdArgs?: any) => {
   // console.log('projectName: ', projectName);
   // console.log('cmdArgs: ', cmdArgs);
+
+  /**
+   * action 的执行流程
+   * 1. 生成 project 存放的目标地址
+   * 2. 确认目标地址是否存在重名的内容？如果存在咨询问是否覆盖安装
+   * 3. 交互信息的弹出和输入，同时返回用户的选择信息
+   * 4. 拷贝项目到目标存放地址
+   * 5. 将用户输入的信息导入到 package.json 中
+   * 6. 运行 npm intall 指令
+   * 7. 提示用户项目运行成功
+   */
+
   try {
+    // projectName 项目放置的位置
     const targetDir = path.join(
       (cmdArgs && cmdArgs.context) || cwd,
       projectName
@@ -101,8 +125,9 @@ const action = async (projectName: string, cmdArgs?: any) => {
 
 export default {
   command: 'create <registry-name>',
-  description: '创建一个npm私服仓库',
-  // TODO: 这里 context 参数应该是必传的，但是不传好像也没啥事情？
-  optionList: [['--context <context>', '上下文路径']],
+  description: '创建一个 admin 仓库',
+  // 这里 context 参数应该是必传的，但是不传好像也没啥事情？
+  // TODO: cli 怎么查看 options 的具体信息呢？
+  optionList: [['--context [context]', '上下文路径']],
   action,
 };

@@ -36,6 +36,13 @@ const getLatestVersion = async () => {
 };
 
 function start() {
+  /**
+   * 1. 完成指令的注册
+   * 2. s
+   * 3. 使用 program.parseAsync(process.argv) 解析用户当前输入的指令
+   *
+   */
+  // 1. 获取指令文件的路径
   const commandsPath = getCommand();
 
   commandsPath.forEach((commandPath) => {
@@ -90,7 +97,7 @@ function start() {
     process.exitCode = 1;
   });
 
-  // TODO: 其实没有理解这里为什么要有这一句
+  // 解析当前用户输入的指令
   program.parseAsync(process.argv);
 }
 
